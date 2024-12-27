@@ -10,5 +10,6 @@ Note Akun :
 Password :
 1. 12345
 
-NB: - Untuk password bagian dokter dan pasien meyesuaikan nama_user pada tabel tb_user
-    - untuk password dokter tidak menggunakan gelar "Dr."
+NB: 
+- Untuk password bagian dokter dan pasien meyesuaikan nama_user pada tabel tb_user
+- untuk password dokter tidak menggunakan gelar "Dr."
