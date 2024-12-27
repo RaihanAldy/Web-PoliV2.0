@@ -1,0 +1,8 @@
+{
+    "require": {
+        "php": "^7.0 || ^8.0",
+        "ramsey/uuid": "^3.9",
+        "moontoast/math": "^1.1",
+        "ckeditor/ckeditor": "^4.9"
+    }
+}
