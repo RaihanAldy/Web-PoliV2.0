@@ -3,12 +3,12 @@
       <div class="slides">
           <div class="slide" id="2">
             <div class="content second-content">
-         <h1 style="color: white;">Data Pasien</h1>
+         <h1 style="color: black;">Data Pasien</h1>
          <h4>
-            <small style="color: white;">Data Pasien</small>
+            <small style="color: black;">Data Pasien</small>
          </h4>
          <div class="table-responsive">
-             <table class="table table-bordered table-hover" id="pasien" style="color: white; background-color: #3b3b3b;">
+             <table class="table table-bordered table-hover" id="pasien" style="color: black; ">
                 <thead>
                   <tr align="center">
                      <th>Nomor</th>
@@ -26,7 +26,7 @@
                 $no = 1;
                 $sql_poli = mysqli_query($con,"SELECT * FROM pasien") or die(mysqli_error($con));
                 while ($data = mysqli_fetch_array($sql_poli)) { ?>
-                    <tr style="background-color: #222222;">
+                    <tr>
                         <!-- <td align="center">
                             <input type="checkbox" name="checked[]" class="check" value="<?=$data['id']?>">
                         </td> -->

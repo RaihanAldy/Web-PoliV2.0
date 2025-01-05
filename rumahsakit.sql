@@ -37,14 +37,15 @@ CREATE TABLE IF NOT EXISTS `daftar_poli` (
   CONSTRAINT `FK_daftar_poli_dokter` FOREIGN KEY (`id_dokter`) REFERENCES `dokter` (`id`),
   CONSTRAINT `FK_daftar_poli_jadwal_periksa` FOREIGN KEY (`id_jadwal`) REFERENCES `jadwal_periksa` (`id`),
   CONSTRAINT `FK_daftar_poli_pasien` FOREIGN KEY (`id_pasien`) REFERENCES `pasien` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- Membuang data untuk tabel rumahsakit.daftar_poli: ~4 rows (lebih kurang)
 INSERT INTO `daftar_poli` (`id`, `id_pasien`, `id_poli`, `id_dokter`, `id_jadwal`, `keluhan`, `no_antrian`) VALUES
 	(2, 1, 1, 1, 1, 'Sakit Tipes', 1),
 	(4, 2, 2, 3, 2, 'Flu', 2),
 	(5, 3, 1, 1, 2, 'Anemia / Kurang Darah', 3),
-	(7, 4, 2, 3, 2, 'Batuk Berdahak', 5);
+	(7, 4, 2, 3, 2, 'Batuk Berdahak', 5),
+	(8, 1, 2, 3, 2, 'Demam Berdarah', 6);
 
 -- membuang struktur untuk table rumahsakit.detail_periksa
 CREATE TABLE IF NOT EXISTS `detail_periksa` (
@@ -56,14 +57,17 @@ CREATE TABLE IF NOT EXISTS `detail_periksa` (
   KEY `FK_detail_periksa_obat` (`id_obat`),
   CONSTRAINT `FK_detail_periksa_obat` FOREIGN KEY (`id_obat`) REFERENCES `obat` (`id`),
   CONSTRAINT `FK_detail_periksa_periksa` FOREIGN KEY (`id_periksa`) REFERENCES `periksa` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Membuang data untuk tabel rumahsakit.detail_periksa: ~2 rows (lebih kurang)
+-- Membuang data untuk tabel rumahsakit.detail_periksa: ~6 rows (lebih kurang)
 INSERT INTO `detail_periksa` (`id`, `id_periksa`, `id_obat`) VALUES
 	(5, 1, 2),
 	(6, 1, 3),
 	(7, 4, 3),
-	(8, 4, 4);
+	(8, 4, 4),
+	(9, 5, 6),
+	(10, 5, 7),
+	(11, 6, 5);
 
 -- membuang struktur untuk table rumahsakit.dokter
 CREATE TABLE IF NOT EXISTS `dokter` (
@@ -95,13 +99,12 @@ CREATE TABLE IF NOT EXISTS `jadwal_periksa` (
   PRIMARY KEY (`id`),
   KEY `FK_jadwal_periksa_dokter` (`id_dokter`),
   CONSTRAINT `FK_jadwal_periksa_dokter` FOREIGN KEY (`id_dokter`) REFERENCES `dokter` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- Membuang data untuk tabel rumahsakit.jadwal_periksa: ~3 rows (lebih kurang)
 INSERT INTO `jadwal_periksa` (`id`, `id_dokter`, `hari`, `jam_mulai`, `jam_selesai`) VALUES
 	(1, 1, 'Selasa', '12:45:00', '16:00:00'),
-	(2, 3, 'Jumat', '18:00:00', '21:00:00'),
-	(6, 3, 'Senin', '14:10:00', '15:50:00');
+	(2, 3, 'Jumat', '18:00:00', '21:00:00');
 
 -- membuang struktur untuk table rumahsakit.obat
 CREATE TABLE IF NOT EXISTS `obat` (
@@ -154,12 +157,14 @@ CREATE TABLE IF NOT EXISTS `periksa` (
   PRIMARY KEY (`id`),
   KEY `FK_periksa_daftar_poli` (`id_daftar_poli`),
   CONSTRAINT `FK_periksa_daftar_poli` FOREIGN KEY (`id_daftar_poli`) REFERENCES `daftar_poli` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Membuang data untuk tabel rumahsakit.periksa: ~2 rows (lebih kurang)
+-- Membuang data untuk tabel rumahsakit.periksa: ~4 rows (lebih kurang)
 INSERT INTO `periksa` (`id`, `id_daftar_poli`, `tgl_periksa`, `catatan`, `biaya_periksa`) VALUES
 	(1, 4, '2024-12-04', 'Istirahat aja yang cukup', 179500),
-	(4, 7, '2024-12-17', 'MInum Obat', 158500);
+	(4, 7, '2024-12-17', 'MInum Obat', 158500),
+	(5, 8, '2024-12-30', 'Istirahat, minum Obat', 177000),
+	(6, 5, '2024-12-29', 'Istirahat,Minum Obat', 160000);
 
 -- membuang struktur untuk table rumahsakit.poli
 CREATE TABLE IF NOT EXISTS `poli` (

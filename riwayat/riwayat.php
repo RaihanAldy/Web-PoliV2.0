@@ -31,55 +31,55 @@ $query_riwayat = mysqli_query($con, "
 <div class="slides">
     <div class="slide" id="2">
         <div class="content second-content">
-            <h1 style="color: white;">Riwayat Pasien</h1>
+            <h1 style="color: black;">Riwayat Pasien</h1>
 
-            <h3 style="color: white;">Informasi Pasien</h3>
-            <table class="table table-bordered" style="background-color: #222222; color: white;">
+            <h3 style="color: black;">Informasi Pasien</h3>
+            <table class="table table-bordered" style="color: black;">
                 <tr>
-                    <th style="background-color: #222222; color: white;">Nama</th>
-                    <td style="color: white;"><?= $data_pasien['nama'] ?></td>
+                    <th style="color: black;">Nama</th>
+                    <td style="color: black;"><?= $data_pasien['nama'] ?></td>
                 </tr>
                 <tr>
-                    <th style="background-color: #222222; color: white;">Alamat</th>
-                    <td style="color: white;"><?= $data_pasien['alamat'] ?></td>
+                    <th style="color: black;">Alamat</th>
+                    <td style="color: black;"><?= $data_pasien['alamat'] ?></td>
                 </tr>
                 <tr>
-                    <th style="background-color: #222222; color: white;">No. KTP</th>
-                    <td style="color: white;"><?= $data_pasien['no_ktp'] ?></td>
+                    <th style="color: black;">No. KTP</th>
+                    <td style="color: black;"><?= $data_pasien['no_ktp'] ?></td>
                 </tr>
                 <tr>
-                    <th style="background-color: #222222; color: white;">No. HP</th>
-                    <td style="color: white;"><?= $data_pasien['no_hp'] ?></td>
+                    <th style="color: black;">No. HP</th>
+                    <td style="color: black;"><?= $data_pasien['no_hp'] ?></td>
                 </tr>
             </table>
 
-            <h3 style="color: white;">Riwayat Pemeriksaan</h3>
-            <table class="table table-bordered table-hover" style="background-color: #3b3b3b; color: white;">
+            <h3 style="color: black;">Riwayat Pemeriksaan</h3>
+            <table class="table table-bordered table-hover" style="color: black;">
                 <thead>
                     <tr>
-                        <th style="background-color: #222222; color: white;">Tanggal Periksa</th>
-                        <th style="background-color: #222222; color: white;">Keluhan</th>
-                        <th style="background-color: #222222; color: white;">Catatan</th>
-                        <th style="background-color: #222222; color: white;">Dokter</th>
-                        <th style="background-color: #222222; color: white;">Obat</th>
-                        <th style="background-color: #222222; color: white;">Biaya</th>
+                        <th style="color: black;">Tanggal Periksa</th>
+                        <th style="color: black;">Keluhan</th>
+                        <th style="color: black;">Catatan</th>
+                        <th style="color: black;">Dokter</th>
+                        <th style="color: black;">Obat</th>
+                        <th style="color: black;">Biaya</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php while ($row = mysqli_fetch_assoc($query_riwayat)) : ?>
                         <tr>
-                            <td style="color: white;"><?= $row['tgl_periksa'] ?></td>
-                            <td style="color: white;"><?= $row['keluhan'] ?></td>
-                            <td style="color: white;"><?= $row['catatan'] ?></td>
-                            <td style="color: white;"><?= $row['nama_dokter'] ?></td>
-                            <td style="color: white;"><?= $row['obat'] ?: '-' ?></td>
-                            <td style="color: white;">Rp<?= number_format($row['biaya_periksa'], 0, ',', '.') ?></td>
+                            <td style="color: black;"><?= $row['tgl_periksa'] ?></td>
+                            <td style="color: black;"><?= $row['keluhan'] ?></td>
+                            <td style="color: black;"><?= $row['catatan'] ?></td>
+                            <td style="color: black;"><?= $row['nama_dokter'] ?></td>
+                            <td style="color: black;"><?= $row['obat'] ?: '-' ?></td>
+                            <td style="color: black;">Rp<?= number_format($row['biaya_periksa'], 0, ',', '.') ?></td>
                         </tr>
                     <?php endwhile; ?>
                 </tbody>
             </table>
 
-            <a href="data.php" class="btn btn-primary" style="color: white; background-color: #3498db; border-color: #2980b9;">Kembali</a>
+            <a href="data.php" class="btn btn-primary" style="color: black; background-color: #3498db; border-color: #2980b9;">Kembali</a>
         </div>
     </div>
 </div>

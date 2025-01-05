@@ -2542,13 +2542,12 @@ select[multiple].form-group-lg .form-control {
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 9999;
+  z-index: 2;
   display: block;
   width: 34px;
   height: 34px;
   line-height: 34px;
   text-align: center;
-  pointer-events: none;
 }
 .input-lg + .form-control-feedback {
   width: 46px;
@@ -2795,7 +2794,6 @@ select[multiple].form-group-lg .form-control {
 .btn.disabled,
 .btn[disabled],
 fieldset[disabled] .btn {
-  pointer-events: none;
   cursor: not-allowed;
   filter: alpha(opacity=65);
   -webkit-box-shadow: none;
@@ -3334,7 +3332,7 @@ tbody.collapse.in {
 .btn-group-vertical > .btn:active,
 .btn-group > .btn.active,
 .btn-group-vertical > .btn.active {
-  z-index: 9999;
+  z-index: 2;
 }
 .btn-group .btn + .btn,
 .btn-group .btn + .btn-group,
@@ -3481,7 +3479,6 @@ tbody.collapse.in {
 [data-toggle="buttons"] > .btn-group > .btn input[type="checkbox"] {
   position: absolute;
   clip: rect(0, 0, 0, 0);
-  pointer-events: none;
 }
 .input-group {
   position: relative;
@@ -3495,7 +3492,7 @@ tbody.collapse.in {
 }
 .input-group .form-control {
   position: relative;
-  z-index: 9999;
+  z-index: 2;
   float: left;
   width: 100%;
   margin-bottom: 0;
@@ -3627,7 +3624,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .input-group-btn > .btn:hover,
 .input-group-btn > .btn:focus,
 .input-group-btn > .btn:active {
-  z-index: 9999;
+  z-index: 2;
 }
 .input-group-btn:first-child > .btn,
 .input-group-btn:first-child > .btn-group {
@@ -4422,7 +4419,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination > .active > span:hover,
 .pagination > .active > a:focus,
 .pagination > .active > span:focus {
-  z-index: 9999;
+  z-index: 2;
   color: #fff;
   cursor: default;
   background-color: #337ab7;
@@ -4940,7 +4937,7 @@ a.list-group-item:focus {
 .list-group-item.active,
 .list-group-item.active:hover,
 .list-group-item.active:focus {
-  z-index: 9999;
+  z-index: 2;
   color: #fff;
   background-color: #337ab7;
   border-color: #337ab7;
@@ -5938,7 +5935,7 @@ button.close {
 .carousel-control .glyphicon-chevron-right {
   position: absolute;
   top: 50%;
-  z-index: 9999;
+  z-index: 5;
   display: inline-block;
 }
 .carousel-control .icon-prev,

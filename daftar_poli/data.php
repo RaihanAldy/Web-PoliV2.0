@@ -3,16 +3,16 @@
 <div class="slides">
     <div class="slide" id="data_pendaftaran">
         <div class="content third-content">
-            <h1 style="color: white;">Daftar Pendaftaran Poli</h1>
+            <h1 style="color: black;">Daftar Pendaftaran Poli</h1>
             <h4>
-                <small style="color: white;">Daftar Pendaftaran Pasien</small>
+                <small style="color: black;">Daftar Pendaftaran Pasien</small>
                 <div class="pull-right">
                     <a href="add.php" class="btn btn-success btn-xs"><i class="glyphicon glyphicon-plus"></i>Tambah Pendaftaran</a>
                 </div>
             </h4>
 
             <div class="table-responsive">
-                <table class="table table-bordered table-hover" style="color: white; background-color: #3b3b3b;">
+                <table class="table table-bordered table-hover" style="color: black; ">
                     <thead>
                         <tr>
                             <th>No.</th>
@@ -49,7 +49,7 @@
                         } else {
                             while ($data = mysqli_fetch_array($sql)) {
                     ?>
-                            <tr style="background-color: #222222;">
+                            <tr>
                                 <td><?= $no++ ?></td>
                                 <td><?= $data['nama_poli'] ?></td>
                                 <td><?= $data['dokter_name'] ?></td>

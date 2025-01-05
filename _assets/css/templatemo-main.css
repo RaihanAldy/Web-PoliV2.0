@@ -41,7 +41,12 @@ https://templatemo.com/tm-512-moonlight
   position: relative;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  /* Fallback */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .seq-preload-circle {
@@ -258,14 +263,19 @@ nav a:hover::before {
           animation: fill 0.7s forwards ease-in-out;
   opacity: 1;
 }
-
+.parent {
+    position: relative; 
+    width: 100%;
+    height: 100%;
+}
 .slides {
   width: 600vw;
   height: 100vh;
   -webkit-transition: -webkit-transform 0.8s ease;
-  transition: -webkit-transform 0.8s ease;
+  -moz-transition: -moz-transform 0.8s ease;
+  -ms-transition: -ms-transform 0.8s ease;
+  -o-transition: -o-transform 0.8s ease;
   transition: transform 0.8s ease;
-  transition: transform 0.8s ease, -webkit-transform 0.8s ease;
 }
 .slides .slide {
   height: 100vh;
@@ -295,22 +305,22 @@ nav a:hover::before {
 }
 
 .slides .slide:nth-child(1) {
-  background-image: url(../images/bg.png);
+  background: linear-gradient(to bottom, #A9CCE3, #E0E0E0);
 }
 .slides .slide:nth-child(2) {
-  background-image: url(../images/bg.png);
+  background: linear-gradient(to bottom, #A9CCE3, #E0E0E0);
 }
 .slides .slide:nth-child(3) {
-  background-image: url(../images/bg.png);
+  background: linear-gradient(to bottom, #A9CCE3, #E0E0E0);
 }
 .slides .slide:nth-child(4) {
-  background-image: url(../images/bg.png);
+  background: linear-gradient(to bottom, #A9CCE3, #E0E0E0);
  }
 .slides .slide:nth-child(5) {
-  background-image: url(../images/bg.png);
+  background: linear-gradient(to bottom, #A9CCE3, #E0E0E0);
 }
 .slides .slide:nth-child(6) {
-  background-image: url(../images/bg.png);
+  background: linear-gradient(to bottom, #A9CCE3, #E0E0E0);
 }
 .slides .slide img {
   width: 100%;

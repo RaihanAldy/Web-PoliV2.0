@@ -2,10 +2,10 @@
 
     <div class="slides">
           <div class="slide" id="2">
-            <div class="content second-content" style="color: white;">
+            <div class="content second-content" style="color: black;">
          <h1>Dokter</h1>
-         <h4>
-            <small>Data Dokter</small>
+         <h4 >
+            <small style="color: black;">Data Dokter</small>
             <div class="pull-right">
               <a href="" class="btn btn-default btn-xs"><i class="glyphicon glyphicon-refresh"></i></a>
               <a href="add.php" class="btn btn-success btn-xs"><i class="glyphicon glyphicon-plus"></i>Tambah Data Dokter</a>
@@ -13,7 +13,7 @@
          </h4>
          <form method="post" name="proses">
          <div class="table-responsive">
-             <table class="table table-bordered table-hover" id="dokter" style="color: white; background-color: #3b3b3b;">
+             <table class="table table-bordered table-hover" id="dokter" style="color: black; ">
                 <thead>
                   <tr>
                     <th>
@@ -35,7 +35,7 @@
                 $no = 1;
                 $sql_poli = mysqli_query($con,"SELECT * FROM dokter") or die(mysqli_error($con));
                 while ($data = mysqli_fetch_array($sql_poli)) { ?>
-                    <tr style="background-color: #222222;">
+                    <tr>
                         <td align="center">
                             <input type="checkbox" name="checked[]" class="check" value="<?=$data['id']?>">
                         </td>

@@ -11,7 +11,7 @@ include_once('../_header.php');
                 <small>Data Pasien Terdaftar</small>
             </h4>
             <div class="table-responsive">
-                <table class="table table-bordered table-hover" id="daftar_poli" style="color: white; background-color: #3b3b3b;">
+                <table class="table table-bordered table-hover" id="daftar_poli" style="color: white;">
                     <thead>
                         <tr>
                             <th><center>No. Antrian</center></th>
@@ -27,7 +27,7 @@ include_once('../_header.php');
                               JOIN pasien p ON dp.id_pasien = p.id";
                     $sql = mysqli_query($con, $query) or die(mysqli_error($con));
                     while ($data = mysqli_fetch_array($sql)) { ?>
-                        <tr style="background-color: #222222;">
+                        <tr>
                             <td><center><?=$data['no_antrian']?></center></td>
                             <td><?=$data['nama_pasien']?></td>
                             <td><?=$data['keluhan']?></td>

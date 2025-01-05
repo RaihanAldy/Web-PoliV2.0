@@ -26,10 +26,10 @@ include_once('../_header.php');
 
 <div class="slides">
     <div class="slide" id="2">
-        <div class="content second-content" style="color: white;">
+        <div class="content second-content" style="color: black;">
             <h1>Jadwal Periksa</h1>
             <h4>
-                <small>Data Jadwal Periksa</small>
+                <small style="color: black;">Data Jadwal Periksa</small>
                 <div class="pull-right">
                     <a href="" class="btn btn-default btn-xs"><i class="glyphicon glyphicon-refresh"></i></a>
                     <a href="add.php" class="btn btn-success btn-xs"><i class="glyphicon glyphicon-plus"></i>Tambah Jadwal Periksa</a>
@@ -37,7 +37,7 @@ include_once('../_header.php');
             </h4>
             <form method="post" name="proses" action="del.php">
                 <div class="table-responsive">
-                    <table class="table table-bordered table-hover" id="jadwal_periksa" style="color: white; background-color: #3b3b3b;">
+                    <table class="table table-bordered table-hover" id="jadwal_periksa" style="color: black;">
                         <thead>
                             <tr>
                                 <th>
@@ -60,7 +60,7 @@ include_once('../_header.php');
                             $sql_jadwal = mysqli_query($con, "SELECT jadwal_periksa.*, dokter.nama AS nama_dokter FROM jadwal_periksa INNER JOIN dokter ON jadwal_periksa.id_dokter = dokter.id") or die(mysqli_error($con));
                             while ($data = mysqli_fetch_array($sql_jadwal)) { 
                             ?>
-                                <tr style="background-color: #222222;">
+                                <tr>
                                     <td align="center">
                                         <input type="checkbox" name="checked[]" class="check" value="<?=$data['id']?>">
                                     </td>

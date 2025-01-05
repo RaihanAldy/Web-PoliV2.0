@@ -3,9 +3,9 @@
       <div class="slides">
       <div class="slide" id="4">
       <div class="content fourth-content">
-         <h1 style="color: white;">Poliklinik</h1>
+         <h1 style="color: black;">Poliklinik</h1>
          <h4>
-         	<small style="color: white;">Data Poliklinik</small>
+         	<small style="color: black;">Data Poliklinik</small>
             <div class="pull-right">
               <a href="" class="btn btn-default btn-xs"><i class="glyphicon glyphicon-refresh"></i></a>
               <a href="generate.php" class="btn btn-success btn-xs"><i class="glyphicon glyphicon-plus"></i>Tambah Data Poliklinik</a>
@@ -13,7 +13,7 @@
          </h4>
          <form method="post" name="proses">
          <div class="table-responsive">
-             <table class="table table-bordered table-hover" style="color: white; background-color: #3b3b3b;">
+             <table class="table table-bordered table-hover" style="color: black;">
              	<thead>
              	  <tr>
              	  	 <th>No.</th>
@@ -32,7 +32,7 @@
                 $sql_poli = mysqli_query($con,"SELECT * FROM poli ORDER BY nama_poli ASC") or die(mysqli_error($con));
                 if(mysqli_num_rows($sql_poli) > 0) { 
                 while ($data = mysqli_fetch_array($sql_poli)) { ?>
-                    <tr style="background-color: #222222;">
+                    <tr>
                         <td><?=$no++?>.</td>
                         <td><?=$data['nama_poli']?></td>
                         <td><?=$data['keterangan']?></td>

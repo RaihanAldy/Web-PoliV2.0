@@ -3,9 +3,9 @@
         <div class="slides">
           <div class="slide" id="3">
             <div class="content third-content">
-         <h1 style="color: white;" >Obat</h1>
+         <h1 style="color: black;" >Obat</h1>
          <h4>
-         	<small style="color: white;">Data Obat</small>
+         	<small style="color: black;">Data Obat</small>
             <div class="pull-right">
               <a href="" class="btn btn-default btn-xs"><i class="glyphicon glyphicon-refresh"></i></a>
               <a href="add.php" class="btn btn-success btn-xs"><i class="glyphicon glyphicon-plus"></i>Tambah Obat</a>
@@ -22,7 +22,7 @@
             </form>
          </div>	
          <div class="table-responsive">
-             <table class="table table-bordered table-hover" style="color: white; background-color: #3b3b3b;">
+             <table class="table table-bordered table-hover" style="color: black; ">
              	<thead>
              	  <tr>
              	  	 <th>No.</th>
@@ -63,7 +63,7 @@
              $sql_obat = mysqli_query($con, $query) or die (mysqli_error($con));
              if(mysqli_num_rows($sql_obat) > 0) {
                 while($data = mysqli_fetch_array($sql_obat)) { ?>
-                   <tr style="background-color: #222222;"> 
+                   <tr> 
                      <td><?=$no++?></td>
                      <td><?=$data['nama_obat']?></td>
                      <td><?=$data['kemasan']?></td>
